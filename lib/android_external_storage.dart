@@ -55,7 +55,6 @@ class DirType {
 ///             DirType.downloadDirectory,
 ///);
 ///```
-/// Note:- some methods only work till android 10
 class AndroidExternalStorage {
   ///getExDirectory method name
   static const _getExDirectory = "getExDirectory";
@@ -74,8 +73,6 @@ class AndroidExternalStorage {
   ///Equivalent to android's Environment.getExternalStorageDirectory().getPath().
   ///Return system's external storage path
   ///
-  ///Only Works till android 10.
-  ///In android 10 you need to add " android:requestLegacyExternalStorage="true" " to the application tag in your app's manifest file
   static Future<String?> getExternalStorageDirectory() async {
     if (!Platform.isAndroid) throw UnsupportedError("Only Works in Android");
     return await _channel.invokeMethod(_getExDirectory);
@@ -96,8 +93,6 @@ class AndroidExternalStorage {
   ///             DirType.downloadDirectory,
   ///);
   ///```
-  ///Only Works till android 10.
-  ///In android 10 you need to add " android:requestLegacyExternalStorage="true" " to the application tag in your app's manifest file
   static Future<String?> getExternalStoragePublicDirectory(
       _DirType type) async {
     if (!Platform.isAndroid) throw UnsupportedError("Only Works in Android");
