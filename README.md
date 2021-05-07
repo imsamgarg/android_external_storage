@@ -6,7 +6,7 @@ This plugin is based on https://pub.dev/packages/ext_storage plugin.
 
 ## Features
 
-> **NOTE** This plugin is only supported Android.
+> **NOTE** This plugin only support Android.
 
   AndroidExternalStorage package calls Android native code.
 
@@ -47,7 +47,7 @@ void _example2() async {
 }
 
 void _example3()async{
-  var path = await AndroidExternalStorage.getRootDirectory();;
+  var path = await AndroidExternalStorage.getRootDirectory();
   print(path);  // /system
 }
 ```
