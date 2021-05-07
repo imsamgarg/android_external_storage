@@ -1,0 +1,25 @@
+name: android_external_storage
+description: android_external_storage is minimal flutter plugin for accessing android's external/shared storage path.
+version: 0.1.0
+author:
+homepage: https://github.com/imsamgarg/android_external_storage
+
+environment:
+  sdk: '>=2.12.0 <3.0.0'
+  flutter: ">=1.20.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+
+  plugin:
+    platforms:
+      android:
+        package: com.example.android_external_storage
+        pluginClass: AndroidExternalStoragePlugin
